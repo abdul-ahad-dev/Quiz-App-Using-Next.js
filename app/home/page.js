@@ -1,13 +1,13 @@
 "use client"
 
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import React, { useCallback } from "react";
 import Navbar from "../components/Navbar";
 import mcqs from "../data/questions";
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import Link from "next/link";
 
 
-function page() {
+function Page() {
     const router = useRouter()
     const pathname = usePathname()
     const searchParams = useSearchParams()
@@ -54,4 +54,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
